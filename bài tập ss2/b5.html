@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sortOrder = "Ascending"; // Thay đổi thành "Descending" để sắp xếp giảm dần
+        let products = [
+            {
+                name: "Laptop",
+                price: 1000,
+            },
+            {
+                name: "Smartphone",
+                price: 800,
+            },
+            {
+                name: "Tablet",
+                price: 500,
+            }
+        ];
+        if (sortOrder == "Ascending") {
+            let sortedProducts = products.sort((a, b) => {
+                return a.price - b.price;
+            });
+            console.log(sortedProducts);
+        } else if (sortOrder == "Descending") {
+            let sortedProducts = products.sort((a, b) => {
+                return b.price - a.price;
+            });
+            console.log(sortedProducts);
+        }
+    </script>
+</body>
+
+</html>
